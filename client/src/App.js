@@ -8,8 +8,6 @@ import Step3 from './components/Step3';
 function App() {
   const [currentStep, setCurrentStep] = useState(1);
   const [imageData, setImageData] = useState(null);
-  const [lyrics, setLyrics] = useState('');
-  const [mp3Url, setMp3Url] = useState(null);
   const [mp3Filename, setMp3Filename] = useState(null);
   const [videoUrl, setVideoUrl] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -20,9 +18,7 @@ function App() {
     setCurrentStep(2);
   };
 
-  const handleStep1Complete = (generatedLyrics, generatedMp3Url, filename) => {
-    setLyrics(generatedLyrics);
-    setMp3Url(generatedMp3Url);
+  const handleStep1Complete = (_generatedLyrics, _generatedMp3Url, filename) => {
     setMp3Filename(filename);
     setCurrentStep(3);
   };
@@ -35,8 +31,6 @@ function App() {
   const reset = () => {
     setCurrentStep(1);
     setImageData(null);
-    setLyrics('');
-    setMp3Url(null);
     setMp3Filename(null);
     setVideoUrl(null);
     setError(null);
