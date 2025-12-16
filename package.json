@@ -1,0 +1,33 @@
+{
+  "name": "ai-music-video-generator",
+  "version": "1.0.0",
+  "description": "AI Music Video Generator using SUNO and Gemini 3",
+  "main": "server/index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon server/index.js",
+    "client": "cd client && npm start",
+    "build": "cd client && npm run build",
+    "install-all": "npm install && cd client && npm install"
+  },
+  "keywords": ["ai", "music", "video", "suno", "gemini"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "multer": "^1.4.5-lts.1",
+    "@google/generative-ai": "^0.2.1",
+    "@fal-ai/client": "^0.5.0",
+    "axios": "^1.6.2",
+    "fluent-ffmpeg": "^2.1.2",
+    "form-data": "^4.0.0",
+    "openai": "^4.20.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2",
+    "concurrently": "^8.2.2"
+  }
+}
+

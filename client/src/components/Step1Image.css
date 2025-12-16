@@ -1,0 +1,119 @@
+.step1-content {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.input-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input-group label {
+  color: #00d4ff;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.input-group textarea,
+.input-group input,
+.input-group select {
+  padding: 0.75rem;
+  border: 2px solid #00d4ff;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.input-group textarea:focus,
+.input-group input:focus,
+.input-group select:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+}
+
+.input-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.generate-button {
+  padding: 1rem 2rem;
+  background: rgba(0, 212, 255, 0.2);
+  border: 2px solid #00d4ff;
+  border-radius: 8px;
+  color: #00d4ff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.generate-button:hover:not(:disabled) {
+  background: rgba(0, 212, 255, 0.3);
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+}
+
+.generate-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.result-section {
+  margin-top: 2rem;
+}
+
+.image-preview {
+  background: rgba(0, 0, 0, 0.5);
+  border: 2px solid #00d4ff;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.image-preview img {
+  max-width: 100%;
+  max-height: 500px;
+  border-radius: 8px;
+}
+
+.continue-button {
+  width: 100%;
+  padding: 1.5rem;
+  background: rgba(0, 212, 255, 0.3);
+  border: 3px solid #00d4ff;
+  border-radius: 12px;
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.continue-button:hover {
+  background: rgba(0, 212, 255, 0.5);
+  box-shadow: 0 0 30px rgba(0, 212, 255, 0.7);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .input-row {
+    grid-template-columns: 1fr;
+  }
+}
+
